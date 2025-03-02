@@ -1,13 +1,13 @@
-import Head from "next/head";
 import styles from "./resume.module.css";
 import { Navigation } from "../components/nav";
 import { Mail, Phone, MapPin, Linkedin, Globe, Github } from "lucide-react";
+import DownloadButton from "@/util/downloadButton";
 
 export default function Resume() {
   return (
     <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <Navigation />
-      <div className={`${styles.resumeContainer}`}>
+      <div className={`${styles.resumeContainer} px-6`}>
         <header className="text-center mb-10">
           <h1 className="text-4xl font-bold text-gray-200">Eren Önal</h1>
           <p className="text-xl text-gray-400">Frontend Developer</p>
@@ -40,7 +40,6 @@ export default function Resume() {
             </li>
           </ul>
         </section>
-
         <section>
           <h2 className="text-3xl font-semibold text-gray-400">Education</h2>
           <div className="flex flex-row justify-start max-w-5xl">
@@ -125,6 +124,7 @@ export default function Resume() {
               <li>
                 Migrated a large-scale Vue 2 app to Vue 3, transitioning from
                 Vuex to Pinia and replacing Vuetify/Tailwind with custom SCSS.
+                Maintained two active codebases for a smooth transition.
               </li>
               <li>
                 Implemented Vite for faster builds, improved performance, and
@@ -132,10 +132,10 @@ export default function Resume() {
               </li>
               <li>
                 Developed real-time dashboards using Highcharts and WebSockets
-                for live data updates.
+                for live data updates, ensuring seamless analytics.
               </li>
               <li>
-                Ensured secure authentication and prevented token-related issues
+                Ensured secure authentication, preventing token-related issues
                 during migration.
               </li>
             </ul>
@@ -149,14 +149,12 @@ export default function Resume() {
               Feb 2024 – Aug 2024 | Ankara, Turkey
             </p>
             <ul className="list-disc list-inside">
+              <li>Developed interactive front-end features using jQuery.</li>
               <li>
-                Developed interactive front-end features using jQuery and
-                created dashboards for data visualization.
+                Created dashboards for static, dynamic data visualization and
+                generated reports using DevExpress.
               </li>
-              <li>
-                Developed backend solutions with .NET and generated reports
-                using DevExpress.
-              </li>
+              <li>Developed backend solutions with .NET.</li>
             </ul>
           </div>
 
@@ -168,15 +166,46 @@ export default function Resume() {
             <p className="text-gray-600">
               Feb 2022 – Feb 2024 | Ankara, Turkey
             </p>
+            <p className="text-gray-600 mt-2">trk.space</p>
             <ul className="list-disc list-inside">
               <li>
-                Led a team in developing a decision support dashboard and worked
-                on Vue.js SPA development.
+                Led a team of seven members in developing a decision support
+                dashboard project that visualizes real-time dynamic data.
               </li>
               <li>
-                Utilized microservices, APIs, websockets, and Redis for dynamic
-                data visualization.
+                Developed the visual design and created a consumer-focused,
+                customizable Vue.js SPA.
               </li>
+              <li>
+                Providing direct engagement and service to individual customers
+                in a B2C environment, I also conduct product presentations.
+              </li>
+              <li>
+                Migrated a project from Vue2 to Vue3 while further developing
+                it.
+              </li>
+              <li>
+                Utilized microservices, APIs, websockets, Redis for queue-cache
+                structures.
+              </li>
+              <li>
+                Developed statistical charts, timeseries charts, components for
+                live and static data visualization.
+              </li>
+              <p className="text-gray-600 mt-2">trk.technology</p>
+
+              <li>
+                Designed site effectively for portfolio showcase with easy
+                navigation.
+              </li>
+              <li>
+                Ensured responsiveness across devices, adapting to screen sizes.
+              </li>
+              <li>Utilized semantic HTML5 tags for SEO and accessibility.</li>
+              <li>
+                Emphasized visuals to engage visitors and highlight offerings.
+              </li>
+              <li>Optimized loading times for enhanced performance.</li>
             </ul>
           </div>
 
@@ -188,14 +217,37 @@ export default function Resume() {
             <p className="text-gray-600">
               Aug 2021 – Feb 2022 | Ankara, Turkey
             </p>
+            <p className="text-gray-600 mt-2">
+              Consolidating Artificial Intelligence Gateway Service Integration
+            </p>
             <ul className="list-disc list-inside">
               <li>
-                Developed a Python gateway interface for backend microservices
-                using Docker for scalability.
+                Developed a Python gateway interface for backend microservices,
+                each of which was Dockerized for enhanced portability and
+                scalability.
               </li>
               <li>
-                Integrated AI-based medical algorithms for diagnosis prediction
-                in the medical industry.
+                Implemented Redis cache and queue structures into the gateway
+                system.
+              </li>
+              <li>Utilized ELK stack for logging purposes.</li>
+            </ul>
+            <p className="text-gray-600 mt-2">
+              Time Series Prediction Model Development{" "}
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Utilized API and web sockets to efficiently scrape time series
+                financial data from Binance.
+              </li>
+              <li>
+                Engineered robust data normalization algorithms to preprocess
+                the acquired data effectively.
+              </li>
+              <li>
+                Developed several models incorporating LSTM, CNN, and SVM
+                algorithms, enabling accurate prediction of candle movements and
+                market trend.
               </li>
             </ul>
           </div>
@@ -210,6 +262,9 @@ export default function Resume() {
             </ul>
           </div>
         </section> */}
+      </div>
+      <div className="fixed ">
+        <DownloadButton />
       </div>
     </div>
   );
