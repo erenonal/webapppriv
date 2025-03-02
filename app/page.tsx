@@ -6,6 +6,7 @@ import Particles from "./components/particles";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
+  { name: "Resume", href: "/resume" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -32,7 +33,7 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
       />
-      <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+      <h1 className="py-3.5 px-0.5 z-10 text-5xl sm:text-6xl md:text-9xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display whitespace-nowrap bg-clip-text">
         erenonal
       </h1>
 
@@ -51,7 +52,7 @@ export default function Home() {
               : "max-h-0 opacity-0 duration-500"
           } overflow-hidden`}
         >
-          <h2 className="text-sm text-zinc-500 mx-40 duration-500">
+          <h2 className="text-sm text-zinc-500 mx-4 sm:mx-8 md:mx-40 duration-500">
             Experienced software developer with four years in start-up
             environments, specializing in crafting visually appealing and
             user-friendly interfaces. Skilled in fast-paced development,
