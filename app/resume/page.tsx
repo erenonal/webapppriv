@@ -252,18 +252,8 @@ export default function Resume() {
             </ul>
           </div>
         </section>
-        {/* <section>
-          <h2 className="text-3xl font-semibold text-gray-700">Certificates</h2>
-          <div className="certificates">
-            <ul className=" text-lg text-gray-600">
-              <li>Vue.js Masterclass - Udemy (2023)</li>
-              <li>JavaScript Algorithms - FreeCodeCamp (2022)</li>
-              <li>Advanced SQL (PostgreSQL) - Udemy (2021)</li>
-            </ul>
-          </div>
-        </section> */}
       </div>
-      <div className="fixed ">
+      <div className="fixed bottom-10 right-10">
         <DownloadButton />
       </div>
     </div>

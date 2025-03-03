@@ -25,11 +25,12 @@ const DownloadButton = () => {
         paddingTop: "1rem",
         paddingBottom: "1rem",
         backgroundColor: "#4b5563",
+        zIndex: 1000,
       }}
     >
       <ArrowDown
         size={18}
-        className=" rounded-lg pt-2"
+        className="rounded-lg pt-2"
         style={{
           marginTop: "-1rem",
         }}
