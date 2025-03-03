@@ -7,10 +7,13 @@ import { Article } from "./article";
 import { Eye } from "lucide-react";
 
 export const revalidate = 60;
+const specificPageViews = [120, 85, 230, 152, 90, 71, 101, 50, 200, 44];
+
 export default async function ProjectsPage() {
-  const views = allProjects.reduce((acc, project) => {
-    const mockPageViews = Math.floor(Math.random() * 100);
-    acc[project.slug] = mockPageViews;
+  const views = allProjects.reduce((acc, project, index) => {
+    const specificPageView =
+      specificPageViews[index % specificPageViews.length];
+    acc[project.slug] = specificPageView;
     return acc;
   }, {} as Record<string, number>);
   const featured = allProjects.find(

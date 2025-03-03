@@ -16,8 +16,6 @@ type Props = {
 export const Header: React.FC<Props> = ({ project, views }) => {
   const ref = useRef<HTMLElement>(null);
   const [isIntersecting, setIntersecting] = useState(true);
-  console.log(project);
-  console.log(views);
   const links: { label: string; href: string }[] = [];
   if (project.repository) {
     links.push({

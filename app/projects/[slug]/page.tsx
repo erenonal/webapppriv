@@ -29,7 +29,12 @@ export default async function PostPage({ params }: Props) {
     notFound();
   }
 
-  const views = Math.floor(Math.random() * 100);
+  const specificPageViews = [120, 85, 230, 152, 90, 71, 101, 50, 200, 44];
+  const views =
+    specificPageViews[
+      allProjects.findIndex((p) => p.slug === slug) % specificPageViews.length
+    ];
+
   return (
     <div className="bg-zinc-50 min-h-screen">
       <Header project={project} views={views} />
