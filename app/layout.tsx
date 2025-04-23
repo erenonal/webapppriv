@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
-
+import Script from "next/script";
 export const metadata: Metadata = {
   title: {
     default: "erenonal.com",
@@ -43,6 +43,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-F4QXSG320S"
+        ></Script>
+        <Script id="google-analytics">
+          {` window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-F4QXSG320S');`}
+        </Script>
         <Analytics />
       </head>
       <body
